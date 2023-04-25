@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-color: var(--PaleBlue);
+    background-repeat: no-repeat;
+    font-size: 1.6rem;
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------------------MAIN-CONTAINER--------------*/
+
+.main-container{
+    margin: 73px 25px 73px 25px;
+    background-color: white;
+    min-width: 32.5rem;
+    max-width: 41.4rem;
+    min-height: 56.9rem;
+    max-height: 70.2rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: .3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+picture{
+    height: 16.3rem;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+/*------------------SECTION-TEXT---------------------*/
+
+.section-text{
+    padding: 3rem;
+    height: 40.8rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-text h1{
+    color: var(--DarkBlue);
+    font-weight: 900;
+}
+.section-text p{
+    color: var(--DesaturatedBlue);
+    font-weight: 500;
+}
+
+/*-----------------------SECTION-MUSIC----------------------*/
+
+.section-music{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--VeryPaleBlue);
+    min-height: 8.1rem;
+    max-height: 9.7rem;
+    min-width: 27.8rem;
+    max-width: 35.3rem;
+    border-radius: 1.5rem;
+}
+
+.img-music{
+    height: 6rem;
+    width: 6rem;
+}
+
+.plan-with-price{
+    grid-column: 2 / 3;
+    text-align: center;
+}
+
+.plan-title{
+    font-weight: 700;
+}
+
+.plan-price{
+    color: var(--DesaturatedBlue);
+}
+
+.change{
+    grid-column: 3 / 4;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/*-----------------------BUTTONS------------------------------*/
+.payment{
+    height: 4.7rem;
+    width: 100%;
+    border-radius: 1rem;
+    border-style: none;
+    background-color: var(--BrightBlue);
+    color: var(--VeryPaleBlue);
+    font-weight: 900;
+    font-size: 1.5rem;
+    box-shadow: .3em 0.3em 1em rgba(0,0,0,0.5);
+}
+
+.payment:hover{
+    cursor: pointer;
+    background-color: rgb(120, 79, 233);
+}
+
+.cancel{
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0.027);
+    font-weight: 900;
+    color:var(--DesaturatedBlue);
+    font-size: 1.5rem;
+}
+
+.cancel:hover{
+    cursor: pointer;
+    color: black;
+}
+
+
+/*-----------------------FOOTER---------------------*/
+
+.attribution { 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem; 
+    text-align: center; 
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*-----------------------MIN-WIDTH: 445PX---------------------*/
+
+@media(min-width: 445px){
+
+    body{
+        background-image: url(./images/pattern-background-desktop.svg);
+    }
+    
+    .plan-with-price{
+        text-align: start;
+    }
+}
+
